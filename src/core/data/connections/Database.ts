@@ -1,3 +1,17 @@
+// import { createConnection, getConnection as getConnectionTypeORM } from 'typeorm';
+
+// export const initConnection = async () => createConnection();
+
+// export const getConnection = () => {
+//    let conn = getConnectionTypeORM();
+
+//    if (!conn) {
+//       throw new Error('Database is not connected');
+//    }
+
+//    return conn;
+// };
+
 import { Connection, createConnection } from 'typeorm';
 
 class Database {
@@ -11,15 +25,7 @@ class Database {
    }
 
    public async openConnection(): Promise<void> {
-      console.log(Database.connection);
-      if (Database.connection == null || Database.connection == undefined) {
-         try {
-            Database.connection = await createConnection();
-         } catch (error) {
-            console.log(error);
-            throw new Error('Erro ao conectar no banco');
-         }
-      }
+      Database.connection = await createConnection();
    }
 }
 

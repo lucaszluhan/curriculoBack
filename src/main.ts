@@ -4,6 +4,7 @@ import 'reflect-metadata';
 import ComentarioRoutes from './features/comentarios/routes/comentarioRoutes';
 import ContatoRoutes from './features/contatos/routes/contatoRoutes';
 import database from './core/data/connections/Database';
+require('dotenv/config');
 
 let app = express();
 
@@ -17,7 +18,7 @@ let contatoRoutes = new ContatoRoutes().init();
 app.use(contatoRoutes);
 
 let port = process.env.PORT || 9191;
-console.log(process.env.DATABASE_TESTE);
+console.log(process.env.DATABASE_URL);
 
 database
    .openConnection()
