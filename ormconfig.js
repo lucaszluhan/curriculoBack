@@ -10,7 +10,6 @@ module.exports = {
       entitiesDir: 'src/core/data/database/entities',
    },
    extra: {
-      ssl: true,
       ssl: {
          rejectUnauthorized: false,
       },
