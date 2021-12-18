@@ -11,10 +11,10 @@ class Database {
    }
 
    public async openConnection(): Promise<void> {
+      console.log(Database.connection);
       if (Database.connection == null || Database.connection == undefined) {
          try {
             Database.connection = await createConnection();
-            return;
          } catch (error) {
             throw new Error('Erro ao conectar no banco');
          }
