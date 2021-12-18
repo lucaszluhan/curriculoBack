@@ -18,9 +18,4 @@ app.use(contatoRoutes);
 
 let port = process.env.PORT || 9191;
 
-database
-   .openConnection()
-   .then(() => app.listen(port, () => console.log(`app rodando na porta ${port}`)))
-   .catch((error) => {
-      console.log(error);
-   });
+database.openConnection().then(() => app.listen(port, () => console.log(`app rodando na porta ${port}`)));
