@@ -1,9 +1,9 @@
 import express from 'express';
 import cors from 'cors';
 import 'reflect-metadata';
-import database from './core/data/connections/Database';
 import ComentarioRoutes from './features/comentarios/routes/comentarioRoutes';
 import ContatoRoutes from './features/contatos/routes/contatoRoutes';
+import database from './core/data/connections/Database';
 
 let app = express();
 
@@ -17,6 +17,7 @@ let contatoRoutes = new ContatoRoutes().init();
 app.use(contatoRoutes);
 
 let port = process.env.PORT || 9191;
+console.log(process.env.DATABASE_TESTE);
 
 database
    .openConnection()

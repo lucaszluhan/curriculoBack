@@ -2,7 +2,7 @@ require('dotenv').config();
 
 module.exports = {
    type: 'postgres',
-   url: process.env.DB_URL,
+   url: process.env.DATABASE_URL,
    synchronize: false,
    logging: false,
    entities: ['src/core/data/database/entities/**/*'],
@@ -10,6 +10,7 @@ module.exports = {
       entitiesDir: 'src/core/data/database/entities',
    },
    extra: {
+      ssl: true,
       ssl: {
          rejectUnauthorized: false,
       },
