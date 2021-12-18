@@ -1,5 +1,5 @@
 import { Request, Response, Router } from 'express';
-import ComentarioController from '../controllers/ComentarioController';
+import ComentarioController from '../controllers/comentarioController';
 
 export default class ComentarioRoutes {
    public init(): Router {
