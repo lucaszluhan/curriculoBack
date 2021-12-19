@@ -20,10 +20,10 @@ export default class ContatoController {
          this.repository.save(contato);
          return {
             ok: true,
-            msg: 'Contato salvo.',
+            msg: 'Contato enviado.',
          };
       } catch (error) {
-         throw new Error('Erro ao salvar novo contato');
+         throw new Error('Erro ao enviar novo contato');
       }
    }
 }

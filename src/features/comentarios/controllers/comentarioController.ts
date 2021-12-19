@@ -34,10 +34,13 @@ export default class ComentarioController {
          this.repository.save(comentario);
          return {
             ok: true,
-            msg: `Comentario salvo.`,
+            msg: `Comentario enviado.`,
          };
       } catch (error) {
-         throw new Error('Falha ao criar novo comentario');
+         return {
+            ok: false,
+            msg: `Erro ao enviar comentario.`,
+         };
       }
    }
 }

@@ -9,6 +9,7 @@ require('dotenv/config');
 let app = express();
 
 app.use(express.json());
+app.use(cors());
 
 let comentarioRoutes = new ComentarioRoutes().init();
 app.use(comentarioRoutes);
@@ -24,5 +25,3 @@ database
    .catch((error) => {
       console.log(error);
    });
-
-// teste
