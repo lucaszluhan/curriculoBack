@@ -5,9 +5,9 @@ module.exports = {
    url: process.env.DATABASE_URL,
    synchronize: false,
    logging: false,
-   entities: ['**/src/core/data/database/entities/**/*'],
+   entities: ['.dist/src/core/data/database/entities/**/*', 'src/core/data/database/entities/**/*'],
    cli: {
-      entitiesDir: '.dist/src/core/data/database/entities/**/*',
+      entitiesDir: 'src/core/data/database/entities/**/*',
    },
    extra: {
       ssl: {
