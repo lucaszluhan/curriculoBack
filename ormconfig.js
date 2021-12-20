@@ -7,7 +7,7 @@ module.exports = {
    logging: false,
    entities: ['.dist/src/core/data/database/entities/**/*'],
    cli: {
-      entitiesDir: '.dist/src/core/data/database/entities',
+      entitiesDir: '.dist/src/core/data/database/entities/**/*',
    },
    extra: {
       ssl: {

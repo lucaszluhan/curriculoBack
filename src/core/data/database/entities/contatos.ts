@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryColumn } from 'typeorm';
 
 @Entity()
-export default class contatos {
+export default class Contatos {
    @PrimaryColumn()
    id: string;
 

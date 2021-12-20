@@ -1,13 +1,13 @@
 import { randomUUID } from 'crypto';
 import { Repository, getRepository } from 'typeorm';
 
-import comentarios from '../../../core/data/database/entities/comentarios';
+import Comentarios from '../../../core/data/database/entities/comentarios';
 
 export default class ComentarioController {
-   private readonly repository: Repository<comentarios>;
+   private readonly repository: Repository<Comentarios>;
 
    constructor() {
-      this.repository = getRepository(comentarios);
+      this.repository = getRepository(Comentarios);
    }
 
    async list() {

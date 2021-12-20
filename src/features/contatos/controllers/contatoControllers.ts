@@ -1,12 +1,12 @@
 import { randomUUID } from 'crypto';
 import { getRepository, Repository } from 'typeorm';
-import contatos from '../../../core/data/database/entities/contatos';
+import Contatos from '../../../core/data/database/entities/contatos';
 
 export default class ContatoController {
-   private readonly repository: Repository<contatos>;
+   private readonly repository: Repository<Contatos>;
 
    constructor() {
-      this.repository = getRepository(contatos);
+      this.repository = getRepository(Contatos);
    }
 
    create(nome: string, telefone: string, email: string, assunto: string) {

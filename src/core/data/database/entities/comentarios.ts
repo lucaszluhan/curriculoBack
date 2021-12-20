@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryColumn } from 'typeorm';
 
 @Entity()
-export default class comentarios {
+export default class Comentarios {
    @PrimaryColumn()
    id: string;
 
