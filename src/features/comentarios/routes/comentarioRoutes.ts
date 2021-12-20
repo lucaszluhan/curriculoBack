@@ -5,12 +5,8 @@ export default class ComentarioRoutes {
    public init(): Router {
       const routes = Router();
       routes.get('/comentarios', async (req: Request, res: Response) => {
-         try {
-            const result = await new ComentarioController().list();
-            res.status(200).send({ ok: result.ok, data: result.data });
-         } catch (error) {
-            res.status(500).send(error);
-         }
+         const result = await new ComentarioController().list();
+         res.status(200).send({ ok: result.ok, data: result.data });
       });
       routes.post('/comentarios', async (req: Request, res: Response) => {
          try {
