@@ -9,7 +9,6 @@ export default class ComentarioController {
    constructor() {
       this.repository = getRepository(Comentarios);
    }
-
    async list() {
       try {
          let result = await this.repository.find();
