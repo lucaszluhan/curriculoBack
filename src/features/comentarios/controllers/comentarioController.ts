@@ -11,18 +11,11 @@ export default class ComentarioController {
    }
 
    async list() {
-      try {
-         let result = await this.repository.find();
-         return {
-            ok: true,
-            data: result,
-         };
-      } catch (error) {
-         return {
-            ok: false,
-            error,
-         };
-      }
+      let result = await this.repository.find();
+      return {
+         ok: true,
+         data: result,
+      };
    }
 
    async create(nomeX: string, comentarioX: string) {
